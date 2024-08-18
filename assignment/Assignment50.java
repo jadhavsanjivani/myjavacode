@@ -17,6 +17,9 @@ public class Assignment50
 		System.out.println(al);
 		System.out.println(a2);
 		
+		String s = "Sanji";
+		s.contains("San");
+		System.out.println(s.contains("Sanj"));
 		
 
 

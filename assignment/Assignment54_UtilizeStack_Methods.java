@@ -2,6 +2,7 @@ package assignment;
 
 import java.util.Stack;
 
+
 public class Assignment54_UtilizeStack_Methods 
 {
 
@@ -16,6 +17,8 @@ public class Assignment54_UtilizeStack_Methods
 		System.out.println(s);
 		System.out.println(s.pop());
 		System.out.println(s);
+		
+		
 		
 
 	}
