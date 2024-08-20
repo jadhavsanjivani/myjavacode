@@ -12,9 +12,14 @@ public class Autosuggetion_YouTube_Modi
 		ChromeDriver cd = new ChromeDriver();
 		cd.manage().window().maximize();
 		cd.get("https://www.youtube.com/");
+		Thread.sleep(2000);
 		WebElement search = cd.findElement(By.xpath("//input[@id='search']"));
-		search.sendKeys("Modi");
-		Thread.sleep(10000);
+		search.sendKeys("M");
+		search.sendKeys("o");
+		search.sendKeys("d");
+		search.sendKeys("i");
+		
+		Thread.sleep(5000);
 		List<WebElement> le = cd.findElements(By.xpath("//div[@class='sbsb_a']/ul/li"));
 		Thread.sleep(2000);
 		le.get(4).click();
