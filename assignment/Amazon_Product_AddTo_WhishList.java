@@ -8,9 +8,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LaunchAmazon_searchShoe 
+public class Amazon_Product_AddTo_WhishList 
 {
-	public static void main(String[] args) throws InterruptedException
+
+	public static void main(String[] args) 
 	{
 		ChromeDriver cd = new ChromeDriver();
 		cd.manage().window().maximize();
@@ -25,22 +26,9 @@ public class LaunchAmazon_searchShoe
 		String parentId = i.next();
 		String childId = i.next();
 		cd.switchTo().window(childId);
-		WebElement addcart = cd.findElement(By.id("add-to-cart-button"));
-		addcart.click();
-		Thread.sleep(2000);
-		WebElement proceed = cd.findElement(By.name("proceedToRetailCheckout"));
-		proceed.click();
-		WebElement email = cd.findElement(By.name("email"));
-		email.sendKeys("sanjijadhavtest@gmail.com");
-		WebElement continues = cd.findElement(By.xpath("//input[@class='a-button-input']"));
-		continues.click();
-		Thread.sleep(2000);
-		WebElement pass = cd.findElement(By.name("password"));
-		pass.sendKeys("Sanjivani@v16");
-		WebElement signIn = cd.findElement(By.id("signInSubmit"));
-		signIn.click();
-		
-		
+		WebElement buynow = cd.findElement(By.linkText("Add to Wish List"));
+		buynow.click();
+
 	}
 
 }

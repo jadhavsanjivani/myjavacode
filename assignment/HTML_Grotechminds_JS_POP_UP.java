@@ -1,16 +1,20 @@
 package SeleniumPractice;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class PerformActions_HTMLfile
+public class HTML_Grotechminds_JS_POP_UP 
 {
+
 	public static void main(String[] args) throws InterruptedException 
 	{
 		ChromeDriver cd = new ChromeDriver();
 		cd.manage().window().maximize();
 		cd.get("file:///C:/Users/ratho/Downloads/learningHTML1.html");
-		cd.switchTo().alert().dismiss();
+		Thread.sleep(2000);
+		cd.switchTo().alert().accept();
+		
 		WebElement username = cd.findElement(By.name("username"));
 		username.sendKeys("sanjivani");
 		WebElement hint = cd.findElement(By.name("say hello"));
@@ -37,7 +41,6 @@ public class PerformActions_HTMLfile
 		link.click();
 		Thread.sleep(5000);
 		cd.quit();
-		
 
 	}
 

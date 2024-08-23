@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Grotechmind_Registration_form 
+public class Grotechminds_Registration_ChooseFile 
 {
 
-	public static void main(String[] args) throws InterruptedException
+	public static void main(String[] args) throws InterruptedException 
 	{
 		ChromeDriver cd = new ChromeDriver();
 		cd.manage().window().maximize();
@@ -46,7 +46,8 @@ public class Grotechmind_Registration_form
 		submit.click();
 		Thread.sleep(5000);
 		cd.switchTo().alert().accept();
-		//cd.quit();
+		Thread.sleep(10000);
+		cd.quit();
 
 	}
 
